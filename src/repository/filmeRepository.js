@@ -17,4 +17,16 @@ values(?,?,?)
 
 }
 
+export async function Consultarfilmes(nome){
+    let comando = `
+    select *from catalogo
+where nome like ?;
+    `
+
+    let resposta = await con.query(comando,[`%${nome}%`])
+    let registros = resposta[0]
+
+    return registros
+}
+
 
