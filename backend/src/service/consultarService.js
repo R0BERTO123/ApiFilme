@@ -1,4 +1,4 @@
-import { Consultarfilmes } from "../../repository/filmeRepository.js";
+import { Consultarfilmes } from "../repository/filmeRepository.js";
 
 export default async function ConsultarfilmesService(nome){
     if(!nome){

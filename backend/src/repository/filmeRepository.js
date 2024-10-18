@@ -4,8 +4,8 @@ import con from './connection.js';
 
 export async function salvarfilme(filme){
     let comando =`
-    insert into catalogo(nome,sinopse,bom)
-values(?,?,?)
+    insert into tb_fime(filme, sinopse, avaliacao, lancamento, disponivel)
+    values(?,?,?,?,?)
     `
 
 

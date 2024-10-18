@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import App from './App/App';
+import App from './home/App';
+import Consultar from './consultar';
 
 export default function Router(){
 
@@ -9,6 +10,7 @@ export default function Router(){
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />}  />
+        <Route path='/consultar' element={<Consultar />}  />
       </Routes>
     </BrowserRouter>
   

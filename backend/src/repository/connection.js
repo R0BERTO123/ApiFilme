@@ -11,7 +11,7 @@ let con= await mysql.createConnection({
 
 })
 
-console.log("VAII CARALHOO")
+console.log("VAII")
 
 export default con;
 

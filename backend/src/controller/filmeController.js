@@ -1,9 +1,9 @@
 import {salvarfilme} from "../repository/filmeRepository.js";
 import { Router } from "express";
 import '../utils/global.js'
-import salvarfilmeService from "../service/filme/salvarfilmeService.js";
+import salvarfilmeService from "../service/salvarfilmeService.js";
 import { Consultarfilmes } from "../repository/filmeRepository.js";
-import ConsultarfilmesService from "../service/filme/consultarService.js";
+import ConsultarfilmesService from "../service/consultarService.js";
 
 const endpoints = Router()
 

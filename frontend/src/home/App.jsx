@@ -18,15 +18,18 @@ export default function App() {
           "senha": senha
       }
     
-      const url = `http://localhost:5001/entrar/`
+      const url = `http://localhost:5001/entrar`
       let resp = await axios.post(url, usuario)
 
+      if (resp.data.erro != undefined) {
+        alert(resp.data.erro)
+    }else{
       localStorage.setItem('USUARIO', resp.data.token)
             navigate('/consultar')
 
     }
 
-
+  }
   return (
     <div className="App">
 
@@ -36,18 +39,18 @@ export default function App() {
 
         <div className='campo'>
                 <label htmlFor='nome'>Nome</label>
-                <input/>
+                <input value={nome} onChange={e=>setNome(e.target.value)}/>
             </div>
 
             <div className='campo'>
                 <label htmlFor='senha'>Senha</label>
-                <input/>
+                <input value={senha} onChange={e=> setSenha(e.target.value)}/>
             </div>
 
       
 
       </div>
-      <button>Entrar</button>
+      <button onClick={entrar}>Entrar</button>
     
     </div>
   );
