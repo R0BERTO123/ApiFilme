@@ -3,10 +3,10 @@ import con from "./connection.js";
 
 export async function inserirUsuario(usuario){
     let comando =`
-    insert into tb_usuario(nome,email,senha)
-values(?,?,?)
+    insert into tb_usuario(nome,senha)
+values(?,?)
     `
-    let resposta = await con.query(comando,[usuario.nome, usuario.email, usuario.senha])
+    let resposta = await con.query(comando,[usuario.nome, usuario.senha])
 
     let info = resposta[0]
     let iduauario= info.insertId;

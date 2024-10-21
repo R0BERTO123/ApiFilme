@@ -33,4 +33,6 @@ endpoints.post ('/entrar', async(req,resp)=>{
       
 })
 
+
+
 export default endpoints
